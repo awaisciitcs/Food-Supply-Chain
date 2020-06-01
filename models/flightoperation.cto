@@ -1,0 +1,180 @@
+
+ /**
+ * Write your model definitions here
+ */
+  // Agent.
+  // Manufacturer.
+  // Distributor.
+  // WarehouseManager.
+  // MartAdmin.
+  
+  
+namespace supplychain
+
+concept User {
+  o String emailId
+  o String password
+}
+participant Agent identified by userId {
+o String userId
+o DailyReport lastReport optional
+o DailyReport[] dailyReport optional
+o User userData
+}
+
+participant Manufacturer identified by userId {
+o String userId
+o DailyReport lastReport optional
+o DailyReport[] dailyReport optional
+o User userData
+}
+
+participant Distributor identified by userId {
+o String userId
+o DailyReport lastReport optional
+o DailyReport[] dailyReport optional
+o User userData
+}
+
+participant WarehouseManager identified by userId {
+o String userId
+o DailyReport lastReport optional
+o DailyReport[] dailyReport optional
+o User userData
+}
+
+participant MartAdmin identified by userId {
+o String userId
+o DailyReport lastReport optional
+o DailyReport[] dailyReport optional
+o User userData
+}
+/*
+
+
+*/
+enum ParticipantType {
+  o Agent
+  o Manufacturer
+  o Distributor
+  o WarehouseManager
+  o MartAdmin
+  
+}
+enum ProcessType {
+  o ViewProductDetails
+  o CompleteCatagoriesInformation
+  o ProductConfirmationAfterReceiving
+  o CleaningOperationsOfMart
+  o ProductShelfComplitionProcess
+  o PaymentsByMartAdmin
+  o ViewReports
+  o CompleteProductInformation
+  o ProductManufacturing
+  o AddSampleProductDetails
+  o AddProductBatchDetails
+  o ProductPackaging
+  o DistributorInformationBeforePickUp
+  o AddAgentInformationInWarehouseStock
+  o BatchStatusBeforeShipment
+  o UpdateStatusOfDelivery
+  o ProductBatchStatus
+  o DeliveredProduct
+  o AddDeliveryTimeAndDate
+  o FuelingDuringDistrbution
+  o PackagingOperationsOnProduct
+  o ProductDistribution
+ 
+}
+enum DutyStatus {
+  o OnTime
+  o Late
+  o TooEarly
+}
+
+enum Status {
+  o OnHold
+  o Approved
+  o Rejected
+}
+
+concept DailyReport {
+  o Day day
+  o ProcessStatus processStatus
+}
+concept Time {
+  o DateTime startTime optional
+  o DateTime endTime optional
+}
+asset catagory identified by catagoryId {
+  o String catagoryId
+  o String[] flightList optional                     
+}
+//
+
+concept ActiveParticipants{
+  o String participantId
+  o ProcessType currentProcess
+  o Time processTime
+}
+asset product  identified by productId {
+  o String productId
+  o Integer productStartingMin optional
+  o Integer expectedEndingMins optional
+  o Status productStatus optional
+  o ActiveParticipants[] activeParticipantslist optional 
+  o DailyReport[] HistoryOfAllReports optional
+  o DailyReport[] HistoryOflateResponsiblesReports optional 
+
+}
+
+enum Day {
+  o Monday
+  o Tuesday
+  o Wednesday
+  o Thursday
+  o Friday
+  o Saturday
+  o Sunday
+}
+
+
+concept ProcessStatus{
+o Time time optional
+o ProcessType processType optional
+o DutyStatus dutyStatus optional
+
+}
+transaction createStaff{
+  o ParticipantType participantType
+  o String userId 
+  o String emailId
+  o String password 
+}
+transaction startProcess {
+  o String participantId
+  o ParticipantType participantType 
+  o String productId
+  o ProcessType processType 
+  o DateTime startTime
+  o Day day
+
+}
+transaction createproduct {
+  o String catagoryId
+  o String productId
+  o Status productStatus default = "OnHold"
+}
+transaction endProcess{
+  o String participantId
+  o ParticipantType participantType 
+  o String productId
+  o ProcessType processType 
+  o DateTime endTime
+  o Day day
+  
+}
+transaction createcatagory {
+  o String catagoryId
+}
+
