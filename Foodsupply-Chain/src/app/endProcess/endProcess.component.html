@@ -1,0 +1,594 @@
+<!--
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<div class="modal fade" id="addTransactionModal" tabindex="-1" role="dialog" aria-labelledby="addTransactionModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="addTransactionModalLabel">Create Transaction</h4>
+        <p class="modal-intro">Enter the required values below.</p>
+      </div>
+      <form [formGroup]="myForm">
+        <div class="modal-body">
+
+
+          
+
+            
+              <div class="form-group text-left">
+                <label for="participantId">participantId</label>
+                
+                  <input formControlName="participantId" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <label for="participantType">participantType</label>
+              <div class="checkbox">
+                
+                  <label>
+                    <input
+                      
+                        formControlName="participantType"
+                      
+                      name="participantType"
+                      value="Agent"
+                      type="radio"
+                      
+                    />
+                    Agent
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="participantType"
+                      
+                      name="participantType"
+                      value="Manufacturer"
+                      type="radio"
+                      
+                    />
+                    Manufacturer
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="participantType"
+                      
+                      name="participantType"
+                      value="Distributor"
+                      type="radio"
+                      
+                    />
+                    Distributor
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="participantType"
+                      
+                      name="participantType"
+                      value="WarehouseManager"
+                      type="radio"
+                      
+                    />
+                    WarehouseManager
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="participantType"
+                      
+                      name="participantType"
+                      value="MartAdmin"
+                      type="radio"
+                      
+                    />
+                    MartAdmin
+                  </label>
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="productId">productId</label>
+                
+                  <input formControlName="productId" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <label for="processType">processType</label>
+              <div class="checkbox">
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="ViewProductDetails"
+                      type="radio"
+                      
+                    />
+                    ViewProductDetails
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="CompleteCatagoriesInformation"
+                      type="radio"
+                      
+                    />
+                    CompleteCatagoriesInformation
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="ProductConfirmationAfterReceiving"
+                      type="radio"
+                      
+                    />
+                    ProductConfirmationAfterReceiving
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="CleaningOperationsOfMart"
+                      type="radio"
+                      
+                    />
+                    CleaningOperationsOfMart
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="ProductShelfComplitionProcess"
+                      type="radio"
+                      
+                    />
+                    ProductShelfComplitionProcess
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="PaymentsByMartAdmin"
+                      type="radio"
+                      
+                    />
+                    PaymentsByMartAdmin
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="ViewReports"
+                      type="radio"
+                      
+                    />
+                    ViewReports
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="CompleteProductInformation"
+                      type="radio"
+                      
+                    />
+                    CompleteProductInformation
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="ProductManufacturing"
+                      type="radio"
+                      
+                    />
+                    ProductManufacturing
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="AddSampleProductDetails"
+                      type="radio"
+                      
+                    />
+                    AddSampleProductDetails
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="AddProductBatchDetails"
+                      type="radio"
+                      
+                    />
+                    AddProductBatchDetails
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="ProductPackaging"
+                      type="radio"
+                      
+                    />
+                    ProductPackaging
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="DistributorInformationBeforePickUp"
+                      type="radio"
+                      
+                    />
+                    DistributorInformationBeforePickUp
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="AddAgentInformationInWarehouseStock"
+                      type="radio"
+                      
+                    />
+                    AddAgentInformationInWarehouseStock
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="BatchStatusBeforeShipment"
+                      type="radio"
+                      
+                    />
+                    BatchStatusBeforeShipment
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="UpdateStatusOfDelivery"
+                      type="radio"
+                      
+                    />
+                    UpdateStatusOfDelivery
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="ProductBatchStatus"
+                      type="radio"
+                      
+                    />
+                    ProductBatchStatus
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="DeliveredProduct"
+                      type="radio"
+                      
+                    />
+                    DeliveredProduct
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="AddDeliveryTimeAndDate"
+                      type="radio"
+                      
+                    />
+                    AddDeliveryTimeAndDate
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="FuelingDuringDistrbution"
+                      type="radio"
+                      
+                    />
+                    FuelingDuringDistrbution
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="PackagingOperationsOnProduct"
+                      type="radio"
+                      
+                    />
+                    PackagingOperationsOnProduct
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="processType"
+                      
+                      name="processType"
+                      value="ProductDistribution"
+                      type="radio"
+                      
+                    />
+                    ProductDistribution
+                  </label>
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="endTime">endTime</label>
+                
+                  <input formControlName="endTime" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <label for="day">day</label>
+              <div class="checkbox">
+                
+                  <label>
+                    <input
+                      
+                        formControlName="day"
+                      
+                      name="day"
+                      value="Monday"
+                      type="radio"
+                      
+                    />
+                    Monday
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="day"
+                      
+                      name="day"
+                      value="Tuesday"
+                      type="radio"
+                      
+                    />
+                    Tuesday
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="day"
+                      
+                      name="day"
+                      value="Wednesday"
+                      type="radio"
+                      
+                    />
+                    Wednesday
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="day"
+                      
+                      name="day"
+                      value="Thursday"
+                      type="radio"
+                      
+                    />
+                    Thursday
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="day"
+                      
+                      name="day"
+                      value="Friday"
+                      type="radio"
+                      
+                    />
+                    Friday
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="day"
+                      
+                      name="day"
+                      value="Saturday"
+                      type="radio"
+                      
+                    />
+                    Saturday
+                  </label>
+                
+                  <label>
+                    <input
+                      
+                        formControlName="day"
+                      
+                      name="day"
+                      value="Sunday"
+                      type="radio"
+                      
+                    />
+                    Sunday
+                  </label>
+                
+              </div>
+            
+          
+
+            
+          
+
+            
+          
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container col-md-6">
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+        <strong>Error:</strong> {{errorMessage}}
+    </div>
+
+  <div class="row">
+    <div class="col-md-12">
+        <h1 class="transaction-title" id='transactionName'>endProcess</h1>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          When invoked, this transaction will have the following attributes:
+          <br>
+          <ul>
+            
+              
+                <li><span class="attribute"><b>participantId</b></span></li>
+              
+            
+              
+                <li><span class="attribute"><b>participantType</b></span></li>
+              
+            
+              
+                <li><span class="attribute"><b>productId</b></span></li>
+              
+            
+              
+                <li><span class="attribute"><b>processType</b></span></li>
+              
+            
+              
+                <li><span class="attribute"><b>endTime</b></span></li>
+              
+            
+              
+                <li><span class="attribute"><b>day</b></span></li>
+              
+            
+              
+            
+              
+            
+          </ul>
+        </div>
+      </div>
+      <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">Invoke</button>
+    </div>
+  </div>
+</div>
+
