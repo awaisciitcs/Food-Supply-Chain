@@ -1,0 +1,232 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20200624.191930.4833.001.txt
+Dump event time:  2020/06/24 19:19:30
+Module load time: 2020/06/24 19:15:00
+Process ID: 4833
+Command line: node /home/rana/.nvm/versions/node/v8.17.0/bin/composer network start --networkName flightoperations --networkVersion 0.0.5 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card 
+
+Node.js version: v8.17.0
+(http_parser: 2.8.0, v8: 6.2.414.78, uv: 1.23.2, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.39.2, napi: 4, openssl: 1.0.2s, icu: 60.1, unicode: 10.0,
+ cldr: 32.0, tz: 2017c)
+
+node-report version: 2.2.1 (built against Node.js v8.17.0, glibc 2.27, 64 bit)
+
+OS version: Linux 5.3.0-59-generic #53~18.04.1-Ubuntu SMP Thu Jun 4 14:58:26 UTC 2020
+(glibc: 2.27)
+
+Machine: rana-HP-EliteBook-840-G3 x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+WriteStream.emit (events.js:183:7)
+onwriteError (_stream_writable.js:417:12)
+onwrite (_stream_writable.js:439:5)
+_destroy (internal/streams/destroy.js:46:7)
+WriteStream.Socket._destroy (net.js:568:3)
+WriteStream.destroy (internal/streams/destroy.js:37:8)
+WriteWrap.afterWrite [as oncomplete] (net.js:870:10)
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x7fde8039d09b] nodereport::OnUncaughtException(v8::Isolate*) [/home/rana/.nvm/versions/node/v8.17.0/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0xeb2402] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [node]
+ 2: [pc=0x102bcfd] v8::internal::Runtime_Throw(int, v8::internal::Object**, v8::internal::Isolate*) [node]
+ 3: [pc=0x2e54872842fd] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 1,048,576 bytes, committed memory: 652,064 bytes
+    Capacity: 1,031,168 bytes, used: 634,800 bytes, available: 396,368 bytes
+Heap space name: old_space
+    Memory size: 43,315,200 bytes, committed memory: 42,624,168 bytes
+    Capacity: 42,309,072 bytes, used: 39,486,408 bytes, available: 2,822,664 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,735,680 bytes
+    Capacity: 1,912,576 bytes, used: 1,538,368 bytes, available: 374,208 bytes
+Heap space name: map_space
+    Memory size: 5,787,648 bytes, committed memory: 5,055,592 bytes
+    Capacity: 5,170,432 bytes, used: 1,608,640 bytes, available: 3,561,792 bytes
+Heap space name: large_object_space
+    Memory size: 4,018,176 bytes, committed memory: 4,018,176 bytes
+    Capacity: 1,447,141,288 bytes, used: 3,953,064 bytes, available: 1,443,188,224 bytes
+
+Total heap memory size: 56,266,752 bytes
+Total heap committed memory: 54,085,680 bytes
+Total used heap memory: 47,221,280 bytes
+Total available heap memory: 1,450,343,256 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 3.277283 secs
+  Kernel mode CPU: 0.380508 secs
+  Average CPU Consumption : 1.35474%
+  Maximum resident set size: 138,575,872 bytes
+  Page faults: 5 (I/O required) 56365 (no I/O required)
+  Filesystem activity: 1128 reads 8 writes
+
+Event loop thread resource usage:
+  User mode CPU: 2.783326 secs
+  Kernel mode CPU: 0.320062 secs
+  Average CPU Consumption : 1.1494%
+  Filesystem activity: 1128 reads 8 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x0000000003639f60  
+[--]   check     0x00007ffc8f555140  
+[R-]   idle      0x00007ffc8f5551b8  
+[--]   prepare   0x00007ffc8f555230  
+[--]   check     0x00007ffc8f5552a8  
+[-A]   async     0x000000000218ca80  
+[R-]   timer     0x0000000003668390  repeat: 0, timeout expired: 1029505 ms ago
+[R-]   tty       0x0000000003642838  , file descriptor: 9, write queue size: 0, readable, writable
+[-A]   signal    0x0000000003667fb0  signum: 28 (SIGWINCH)
+[R-]   tty       0x0000000003668108  , write queue size: 0
+[-A]   async     0x00007fde805a5ce0  
+[-A]   signal    0x000000000374d890  signum: 6 (SIGABRT)
+[-A]   signal    0x000000000369aaa0  signum: 14 (SIGALRM)
+[-A]   signal    0x000000000367d380  signum: 1 (SIGHUP)
+[-A]   signal    0x000000000385e690  signum: 2 (SIGINT)
+[-A]   signal    0x000000000373a070  signum: 15 (SIGTERM)
+[-A]   signal    0x00000000036b6250  signum: 26 (SIGVTALRM)
+[-A]   signal    0x00000000036b6340  signum: 24 (SIGXCPU)
+[-A]   signal    0x00000000036dc170  signum: 25 (SIGXFSZ)
+[-A]   signal    0x00000000036dc260  signum: 12 (SIGUSR2)
+[-A]   signal    0x0000000003696270  signum: 5 (SIGTRAP)
+[-A]   signal    0x0000000003696360  signum: 31 (SIGSYS)
+[-A]   signal    0x0000000003738b90  signum: 3 (SIGQUIT)
+[-A]   signal    0x0000000003738c80  signum: 6 (SIGABRT)
+[-A]   signal    0x00000000036b59d0  signum: 29 (SIGIO)
+[-A]   signal    0x00000000036b5ac0  signum: 29 (SIGIO)
+[-A]   signal    0x00000000037399a0  signum: 30 (SIGPWR)
+[-A]   signal    0x0000000003739a90  signum: 16 (SIGSTKFLT)
+[-A]   signal    0x0000000003739060  signum: 31 (SIGSYS)
+[RA]   timer     0x0000000003739150  repeat: 0, timeout in: 80 ms
+[R-]   timer     0x000000000369a6a0  repeat: 0, timeout expired: 268509 ms ago
+[-A]   async     0x00007fde8038fa58  
+[R-]   timer     0x00000000036a74c0  repeat: 0, timeout expired: 1029505 ms ago
+[RA]   prepare   0x00007fde8038f980  
+[R-]   timer     0x000000000374d7a0  repeat: 0, timeout in: 9010025176378355168 ms
+[-A]   tcp       0x0000000003696100  localhost:46630 connected to localhost:7051, send buffer size: 2626560, recv buffer size: 131072, file descriptor: 12, write queue size: 0, readable, writable
+[-A]   timer     0x000000000366b260  repeat: 0, timeout in: 91455 ms
+[-A]   tcp       0x0000000003730020  localhost:46634 connected to localhost:7051, send buffer size: 2626560, recv buffer size: 131072, file descriptor: 13, write queue size: 0, readable, writable
+[RA]   timer     0x00000000036d14a0  repeat: 0, timeout in: 31506 ms
+[--]   timer     0x00000000036fdd60  repeat: 0, timeout expired: 54267 ms ago
+[-A]   timer     0x00007fde7c002670  repeat: 0, timeout in: 5000 ms
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  CLUTTER_IM_MODULE=xim
+  NVM_DIR=/home/rana/.nvm
+  LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+  LC_MEASUREMENT=ur_PK
+  LESSCLOSE=/usr/bin/lesspipe %s %s
+  LC_PAPER=ur_PK
+  LC_MONETARY=ur_PK
+  XDG_MENU_PREFIX=gnome-
+  LANG=en_US.UTF-8
+  MANAGERPID=1968
+  DISPLAY=:0
+  INVOCATION_ID=d3799cca1af84d4995ca10e4e89f9d33
+  GNOME_SHELL_SESSION_MODE=ubuntu
+  COLORTERM=truecolor
+  NVM_CD_FLAGS=
+  USERNAME=rana
+  XDG_VTNR=2
+  SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+  LC_NAME=ur_PK
+  XDG_SESSION_ID=2
+  USER=rana
+  DESKTOP_SESSION=ubuntu
+  QT4_IM_MODULE=xim
+  TEXTDOMAINDIR=/usr/share/locale/
+  GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/fd1cc2c9_317c_4b45_b5d9_a8ee436dd483
+  PWD=/media/rana/New Volume1/fyp project/fyp.0.0.5
+  HOME=/home/rana
+  JOURNAL_STREAM=9:36396
+  TEXTDOMAIN=im-config
+  SSH_AGENT_PID=2093
+  QT_ACCESSIBILITY=1
+  XDG_SESSION_TYPE=x11
+  XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+  XDG_SESSION_DESKTOP=ubuntu
+  LC_ADDRESS=ur_PK
+  DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=161fb732312c94e2b89940315ef3a350
+  LC_NUMERIC=ur_PK
+  GTK_MODULES=gail:atk-bridge
+  WINDOWPATH=2
+  TERM=xterm-256color
+  VTE_VERSION=5202
+  SHELL=/bin/bash
+  QT_IM_MODULE=xim
+  XMODIFIERS=@im=ibus
+  IM_CONFIG_PHASE=2
+  DBUS_STARTER_BUS_TYPE=session
+  NVM_BIN=/home/rana/.nvm/versions/node/v8.17.0/bin
+  XDG_CURRENT_DESKTOP=ubuntu:GNOME
+  GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+  GNOME_TERMINAL_SERVICE=:1.73
+  SHLVL=1
+  XDG_SEAT=seat0
+  LC_TELEPHONE=ur_PK
+  GDMSESSION=ubuntu
+  GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+  LOGNAME=rana
+  DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=161fb732312c94e2b89940315ef3a350
+  XDG_RUNTIME_DIR=/run/user/1000
+  XAUTHORITY=/run/user/1000/gdm/Xauthority
+  XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+  PATH=/home/rana/.nvm/versions/node/v8.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  LC_IDENTIFICATION=ur_PK
+  SESSION_MANAGER=local/rana-HP-EliteBook-840-G3:@/tmp/.ICE-unix/1998,unix/rana-HP-EliteBook-840-G3:/tmp/.ICE-unix/1998
+  LESSOPEN=| /usr/bin/lesspipe %s
+  GTK_IM_MODULE=ibus
+  LC_TIME=ur_PK
+  _=/home/rana/.nvm/versions/node/v8.17.0/bin/composer
+  SUPPRESS_NO_CONFIG_WARNING=y
+  GRPC_SSL_CIPHER_SUITES=ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)              16777216        16777216
+  max memory size (kbytes)              unlimited       unlimited
+  open files                                 4096            4096
+  stack size (bytes)                      8388608       unlimited
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                        31180           31180
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  linux-vdso.so.1
+  /lib/x86_64-linux-gnu/libdl.so.2
+  /lib/x86_64-linux-gnu/librt.so.1
+  /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+  /lib/x86_64-linux-gnu/libm.so.6
+  /lib/x86_64-linux-gnu/libgcc_s.so.1
+  /lib/x86_64-linux-gnu/libpthread.so.0
+  /lib/x86_64-linux-gnu/libc.so.6
+  /lib64/ld-linux-x86-64.so.2
+  /home/rana/.nvm/versions/node/v8.17.0/lib/node_modules/composer-cli/node_modules/node-report/api.node
+  /home/rana/.nvm/versions/node/v8.17.0/lib/node_modules/composer-cli/node_modules/grpc/src/node/extension_binary/node-v57-linux-x64-glibc/grpc_node.node
+  /lib/x86_64-linux-gnu/libnss_files.so.2
+
+================================================================================
